@@ -1,0 +1,19 @@
+// IRemoteBluetoothCallback.aidl
+package com.jitian.remote;
+
+interface IRemoteBluetoothCallback {
+    // 收到起始事件，来着数据通道1，一次完整语音只会调用1次
+
+    void onStartReceiveData();
+    /**
+    * 收到数据，来着数据通道2 ，与通道1是一个异步过程
+    *（如果在onStartReceiveData中做耗时操作，可能未执行完onReceivingData就已经被回调了）
+    * 一次完整语音会回调多次
+    * 但是此函数第一次回调一定会在onStartReceiveData之后
+    */
+    void onReceivingData(out byte[] bytes);
+    /**
+    * 收到结束事件，如果onReceivingData 在一定时间内未收到数据，则会回调此函数
+    */
+    void onFinishReceiveData();
+}
