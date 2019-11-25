@@ -4,6 +4,7 @@ import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.ServiceConnection;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.IBinder;
 import android.os.RemoteException;
@@ -29,11 +30,29 @@ public class MainActivity2 extends AppCompatActivity {
     private IRemoteCallbackService mRemoteCallbackService;
     private String mFilePath = null;
     private OnRemoteDataCallback mRemoteDataCallback = new OnRemoteDataCallback();
+    private IBinder.DeathRecipient deathRecipient = new IBinder.DeathRecipient() {
+        @Override
+        public void binderDied() {
+            Log.d(TAG, "DeathRecipient binderDied");
+            if (mRemoteCallbackService == null) {
+                return;
+            }
+            mRemoteCallbackService.asBinder().unlinkToDeath(deathRecipient, 0);
+            mRemoteCallbackService = null;
+            //rebind remote service
+            bindToService();
+        }
+    };
     private ServiceConnection mServiceConnection = new ServiceConnection() {
         @Override
         public void onServiceConnected(ComponentName name, IBinder iBinder) {
             mRemoteCallbackService = IRemoteCallbackService.Stub.asInterface(iBinder);
             if (mRemoteCallbackService != null) {
+                try {
+                    mRemoteCallbackService.asBinder().linkToDeath(deathRecipient, 0);
+                } catch (RemoteException e) {
+                    e.printStackTrace();
+                }
                 try {
                     mRemoteCallbackService.registerCallback(mRemoteDataCallback);
                 } catch (RemoteException e) {
@@ -83,6 +102,11 @@ public class MainActivity2 extends AppCompatActivity {
     private void bindToService() {
         Intent intent = new Intent();
         intent.setComponent(new ComponentName(TARGET_PACKAGE_NAME, TARGET_SERVICE_NAME));
+        if (Build.VERSION.SDK_INT > Build.VERSION_CODES.O) {
+            startForegroundService(intent);
+        } else {
+            startService(intent);
+        }
         bindService(intent, mServiceConnection, Context.BIND_AUTO_CREATE);
     }
 
