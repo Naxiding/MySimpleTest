@@ -1,6 +1,29 @@
 apply plugin: 'com.android.application'
 
 android {
+    signingConfigs {
+        release {
+            storeFile file('E:\\keystore\\h3\\release.keystore')
+            storePassword 'jitian'
+            keyAlias = 'GaitekkeyAlias'
+            keyPassword 'jitian'
+            v2SigningEnabled true
+        }
+        debug {
+            storeFile file('E:\\keystore\\h3\\release.keystore')
+            keyAlias = 'GaitekkeyAlias'
+            keyPassword 'jitian'
+            storePassword 'jitian'
+            v2SigningEnabled true
+        }
+        release_h6 {
+            storeFile file('E:\\keystore\\h6\\release.keystore')
+            storePassword 'jitian'
+            keyAlias = 'GaitekkeyAlias'
+            keyPassword 'jitian'
+            v2SigningEnabled true
+        }
+    }
     compileSdkVersion 28
     buildToolsVersion "28.0.3"
     defaultConfig {
@@ -12,8 +35,15 @@ android {
     }
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+        debug {
+            signingConfig signingConfigs.release
+        }
+        release_h6 {
+            signingConfig signingConfigs.release_h6
         }
     }
 }

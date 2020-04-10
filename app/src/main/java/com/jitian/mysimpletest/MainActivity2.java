@@ -89,7 +89,7 @@ public class MainActivity2 extends AppCompatActivity {
                 playPcm();
             }
         });
-
+        bindToService();
     }
 
     private void playPcm() {
@@ -150,6 +150,11 @@ public class MainActivity2 extends AppCompatActivity {
                     }
                 });
             }
+        }
+
+        @Override
+        public void onDeviceConnected(String deviceMac) throws RemoteException {
+            Log.d(TAG, "onDeviceConnected:" + deviceMac);
         }
     }
 

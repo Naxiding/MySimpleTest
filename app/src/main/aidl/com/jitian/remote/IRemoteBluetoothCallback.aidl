@@ -7,4 +7,6 @@ interface IRemoteBluetoothCallback {
     void onReceivingData(in byte[] bytes);
 
     void onFinishReceiveData();
+
+    void onDeviceConnected(in String deviceMac);
 }
