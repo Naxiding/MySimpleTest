@@ -10,7 +10,7 @@ import java.io.IOException;
  * @author YangDing
  * @date 2019/11/8
  */
-class PcmPlayerHelper {
+public class PcmPlayerHelper {
 
     private static final int RATE = PcmConfig.RATE;
     private static final int CHANNEL_MODE = PcmConfig.CHANNEL_MODE_PLAY;
@@ -26,7 +26,7 @@ class PcmPlayerHelper {
         mAudioTrack = new AudioTrack(AUDIO_STREAM, RATE, CHANNEL_MODE, PCM_BIT, mBufferSize, MODE_STREAM);
     }
 
-    static PcmPlayerHelper getInstance() {
+    public static PcmPlayerHelper getInstance() {
         return SingletonHolder.INSTANCE;
     }
 
@@ -34,7 +34,7 @@ class PcmPlayerHelper {
         private static final PcmPlayerHelper INSTANCE = new PcmPlayerHelper();
     }
 
-    void play(String pcmFilePath) {
+    public void play(String pcmFilePath) {
         if (isPlaying) {
             return;
         }
@@ -57,7 +57,7 @@ class PcmPlayerHelper {
         }
     }
 
-    void release() {
+    public void release() {
         isPlaying = false;
         if (mAudioTrack != null) {
             mAudioTrack.release();

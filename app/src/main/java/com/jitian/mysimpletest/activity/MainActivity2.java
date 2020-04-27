@@ -1,4 +1,4 @@
-package com.jitian.mysimpletest;
+package com.jitian.mysimpletest.activity;
 
 import android.content.ComponentName;
 import android.content.Context;
@@ -13,6 +13,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 
+import com.jitian.mysimpletest.FileUtil;
+import com.jitian.mysimpletest.PcmPlayerHelper;
+import com.jitian.mysimpletest.R;
+import com.jitian.mysimpletest.ThreadUtil;
 import com.jitian.remote.IRemoteBluetoothCallback;
 import com.jitian.remote.IRemoteCallbackService;
 

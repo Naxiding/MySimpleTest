@@ -12,12 +12,12 @@ import java.util.ArrayList;
  * @author YangDing
  * @date 2019/10/30
  */
-class FileUtil {
+public class FileUtil {
 
     private static final String BLUETOOTH_PARENT_PATH = "/bluetooth";
     private static final String FILE_END = ".pcm";
 
-    static String saveDataToPcmFile(ArrayList<byte[]> resultData, Context context) {
+    public static String saveDataToPcmFile(ArrayList<byte[]> resultData, Context context) {
         BufferedOutputStream bufferedOutputStream = null;
         File targetFile = createNewPcmFile(context);
         if (targetFile != null && targetFile.canWrite()) {

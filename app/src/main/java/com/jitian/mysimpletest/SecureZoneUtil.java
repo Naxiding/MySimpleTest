@@ -85,12 +85,6 @@ public class SecureZoneUtil {
 
     private SecureZoneUtil() {
         mTotalNumber = initNumber();
-        try {
-            Runtime.getRuntime().exec("su");
-            Log.d("yangding","exec su end");
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
     }
 
     public static SecureZoneUtil getInstance() {

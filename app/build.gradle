@@ -1,6 +1,10 @@
 apply plugin: 'com.android.application'
 
 android {
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
     signingConfigs {
         release {
             storeFile file('E:\\keystore\\h3\\release.keystore')
@@ -32,6 +36,13 @@ android {
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"
+        //create Cmake
+        externalNativeBuild {
+            cmake {
+                cppFlags ""
+                abiFilters 'armeabi-v7a', "arm64-v8a"
+            }
+        }
     }
     buildTypes {
         release {
@@ -44,6 +55,12 @@ android {
         }
         release_h6 {
             signingConfig signingConfigs.release_h6
+        }
+    }
+    externalNativeBuild {
+        cmake {
+            path "src/main/jni/CMakeLists.txt"
+            version "3.10.2"
         }
     }
 }

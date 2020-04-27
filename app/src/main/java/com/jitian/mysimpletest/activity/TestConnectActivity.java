@@ -1,4 +1,4 @@
-package com.jitian.mysimpletest;
+package com.jitian.mysimpletest.activity;
 
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
@@ -13,8 +13,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.Toast;
 
+import com.jitian.mysimpletest.BluetoothUtil;
+import com.jitian.mysimpletest.ThreadUtil;
+
 import java.util.List;
-import java.util.UUID;
 
 /**
  * @author YangDing

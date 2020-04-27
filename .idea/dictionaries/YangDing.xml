@@ -4,12 +4,17 @@
       <w>eeprom</w>
       <w>eeprpm</w>
       <w>emac</w>
+      <w>globalhome</w>
       <w>imei</w>
+      <w>jbyte</w>
       <w>jitian</w>
+      <w>jitianencrypt</w>
       <w>keyevent</w>
       <w>mysimpletest</w>
       <w>remotecontrol</w>
       <w>securezone</w>
+      <w>thiz</w>
+      <w>tian</w>
       <w>wmac</w>
       <w>wssn</w>
       <w>yangding</w>

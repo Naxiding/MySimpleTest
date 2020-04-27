@@ -1,10 +1,13 @@
-package com.jitian.mysimpletest;
+package com.jitian.mysimpletest.activity;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
+
+import com.jitian.mysimpletest.R;
+import com.jitian.mysimpletest.SecureZoneUtil;
 
 import java.io.IOException;
 
