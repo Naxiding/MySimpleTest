@@ -187,7 +187,7 @@ public class UsbDongleController {
             ThreadUtil.execute(new Runnable() {
                 @Override
                 public void run() {
-                    int times = 0;
+                    int times = 1;
                     while (shouldStillListener) {
                         if (readData() > 0 || times >= DEFAULT_WAIT_TIMES) {
                             shouldStillListener = false;

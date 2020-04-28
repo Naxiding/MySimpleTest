@@ -24,7 +24,7 @@ public class LogUtil {
             if ((b & 0xff) < 0x10) {
                 builder.append("0");
             }
-            builder.append(Integer.toHexString(b).toUpperCase()).append(" ");
+            builder.append(Integer.toHexString(b & 0xff).toUpperCase()).append(" ");
         }
         Log.d(LogUtil.class.getName(), "Byte{ " + builder.toString() + " }");
     }
