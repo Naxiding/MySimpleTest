@@ -19,7 +19,7 @@ static volatile uint8_t FUN_TYPE_1 = 0;
 static volatile uint8_t FUN_TYPE_2 = 1;
 static volatile uint8_t FUN_TYPE_NUM = 2;
 static volatile uint8_t FUN_REMAINDER = 99;
-static volatile uint8_t DATA_LENGTH = 64;
+static volatile uint8_t DATA_LENGTH = 7;
 
 #ifdef __cplusplus
 extern "C" {
@@ -39,7 +39,7 @@ uint8_t countFun2(uint8_t realData[]);
  */
 JNIEXPORT jbyteArray JNICALL
 Java_com_jitian_jni_JiTianEncrypt_getEncryptData(JNIEnv *env, jobject thiz) {
-    uint8_t numLength = getRandomNumLength();
+    uint8_t numLength = NUM_MIN_LENGTH;
     uint8_t funType = getRandomFunType();
     uint8_t *outData = new uint8_t[DATA_LENGTH]();
     LOG("numLength:%d,funType:%d", numLength, funType);

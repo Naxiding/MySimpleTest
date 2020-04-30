@@ -134,7 +134,6 @@ public class UsbDongleController {
 
     public void sendData() {
         mNativeData = mNativeEncrypt.getEncryptData();
-        mNativeData = new byte[]{0x12, 0x34};
         sendData(mNativeData);
     }
 
@@ -154,7 +153,7 @@ public class UsbDongleController {
             int read = mConnection.bulkTransfer(mInPoint, readData, readData.length, DEFAULT_TIMEOUT);
             LogUtil.d("read:" + read);
             if (read > 0) {
-                LogUtil.d("data:" + Arrays.toString(readData));
+                LogUtil.d(readData);
                 if (mOnChangeCallback != null) {
                     mOnChangeCallback.onMacResponse(analysisDongleMac(readData));
                 }
@@ -164,17 +163,19 @@ public class UsbDongleController {
         return 0;
     }
 
+    private static final int DEFINE_DATA_LENGTH = 7;
+
     private String analysisDongleMac(byte[] responseData) {
         if (responseData == null || responseData[0] != mNativeEncrypt.getCertifiedData(mNativeData)) {
             return null;
         } else {
             StringBuilder builder = new StringBuilder();
-            for (int index = 1; index < responseData.length; index++) {
+            for (int index = 1; index < DEFINE_DATA_LENGTH; index++) {
                 if ((responseData[index] & 0xff) < 0x10) {
                     builder.append("0");
                 }
-                builder.append(Integer.toHexString(responseData[index]).toUpperCase());
-                if (index < responseData.length - 1) {
+                builder.append(Integer.toHexString(responseData[index] & 0xff).toUpperCase());
+                if (index < DEFINE_DATA_LENGTH - 1) {
                     builder.append(":");
                 }
             }
