@@ -12,10 +12,9 @@ import android.hardware.usb.UsbEndpoint;
 import android.hardware.usb.UsbInterface;
 import android.hardware.usb.UsbManager;
 
-import com.jitian.mysimpletest.LogUtil;
-import com.jitian.mysimpletest.ThreadUtil;
+import com.jitian.mysimpletest.utils.LogUtil;
+import com.jitian.mysimpletest.utils.ThreadUtil;
 
-import java.util.Arrays;
 import java.util.HashMap;
 
 /**

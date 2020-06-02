@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <integer name="animation_time">500</integer>
     <dimen name="result_text_margin_left">5dp</dimen>
     <dimen name="result_text_margin_right">5dp</dimen>
+    <dimen name="float_button_size_width">40dp</dimen>
+    <dimen name="float_button_size_height">34dp</dimen>
+    <dimen name="float_button_size_width_normal">40dp</dimen>
+    <dimen name="float_button_start_right">175dp</dimen>
+    <dimen name="float_button_click_area">30dp</dimen>
+    <dimen name="float_button_click_area_margin">10dp</dimen>
+
+    <dimen name="nav_margin_left">100dp</dimen>
+    <dimen name="nav_margin_right">100dp</dimen>
+    <dimen name="nav_bar_button_width">18dp</dimen>
+    <dimen name="nav_bar_button_height">10dp</dimen>
+
 </resources>

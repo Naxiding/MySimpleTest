@@ -1,4 +1,4 @@
-package com.jitian.mysimpletest;
+package com.jitian.mysimpletest.utils;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.LinkedBlockingQueue;

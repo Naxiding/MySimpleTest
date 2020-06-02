@@ -7,9 +7,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.jitian.mysimpletest.R;
-import com.jitian.mysimpletest.SecureZoneUtil;
-
-import java.io.IOException;
+import com.jitian.mysimpletest.utils.SecureZoneUtil;
 
 /**
  * @author YangDing

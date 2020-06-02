@@ -1,9 +1,6 @@
 package com.jitian.mysimpletest.activity;
 
-import com.jitian.mysimpletest.LogUtil;
-
-import java.security.KeyPair;
-import java.util.Random;
+import com.jitian.mysimpletest.utils.LogUtil;
 
 /**
  * @author YangDing

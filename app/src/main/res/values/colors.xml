@@ -206,4 +206,5 @@
     <color name="selector_color_checked">#63bfff</color>
     <color name="selector_color_unchecked">#cccccc</color>
     <color name="shadow_color">#4d000000</color>
+    <color name="nav_button_color">#101010</color>
 </resources>

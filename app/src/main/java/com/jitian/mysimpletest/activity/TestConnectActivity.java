@@ -13,8 +13,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.Toast;
 
-import com.jitian.mysimpletest.BluetoothUtil;
-import com.jitian.mysimpletest.ThreadUtil;
+import com.jitian.mysimpletest.utils.BluetoothUtil;
+import com.jitian.mysimpletest.utils.ThreadUtil;
 
 import java.util.List;
 

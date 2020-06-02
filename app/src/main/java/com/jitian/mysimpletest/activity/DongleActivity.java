@@ -12,7 +12,7 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 
-import com.jitian.mysimpletest.LogUtil;
+import com.jitian.mysimpletest.utils.LogUtil;
 import com.jitian.mysimpletest.R;
 import com.jitian.remote.IRemoteDongleCallback;
 import com.jitian.remote.IRemoteDongleCallbackService;

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/float_button_size_height"
+    android:background="@drawable/ic_sysbar_background"
+    android:baselineAligned="false"
+    android:orientation="horizontal">
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:id="@+id/back"
+        style="@style/CustomNavBarButton">
+
+        <TextView
+            android:layout_width="@dimen/nav_bar_button_width"
+            android:layout_height="@dimen/nav_bar_button_height"
+            android:background="@drawable/ic_sysbar_back" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/recent"
+        style="@style/CustomNavBarButton">
+
+        <TextView
+            android:layout_width="@dimen/nav_bar_button_width"
+            android:layout_height="@dimen/nav_bar_button_height"
+            android:background="@drawable/ic_sysbar_recent" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/home"
+        style="@style/CustomNavBarButton">
+
+        <TextView
+            android:layout_width="@dimen/nav_bar_button_width"
+            android:layout_height="@dimen/nav_bar_button_height"
+            android:background="@drawable/ic_sysbar_home" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/hide"
+        style="@style/CustomNavBarButton">
+
+        <TextView
+            android:layout_width="@dimen/nav_bar_button_width"
+            android:layout_height="@dimen/nav_bar_button_height"
+            android:background="@drawable/ic_sysbar_hide" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/show"
+        style="@style/CustomNavBarButton">
+
+        <TextView
+            android:layout_width="@dimen/nav_bar_button_width"
+            android:layout_height="@dimen/nav_bar_button_height"
+            android:background="@drawable/ic_sysbar_show" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+</LinearLayout>

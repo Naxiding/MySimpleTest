@@ -1,4 +1,4 @@
-package com.jitian.mysimpletest;
+package com.jitian.mysimpletest.utils;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;

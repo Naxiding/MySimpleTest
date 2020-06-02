@@ -3,20 +3,16 @@ package com.jitian.mysimpletest.activity;
 import android.app.Instrumentation;
 import android.content.Context;
 import android.media.AudioManager;
-import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
-import android.view.KeyEvent;
 import android.view.View;
 
 import com.jitian.mysimpletest.R;
-import com.jitian.mysimpletest.ThreadUtil;
+import com.jitian.mysimpletest.utils.ThreadUtil;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 
 /**
  * @author YangDing
