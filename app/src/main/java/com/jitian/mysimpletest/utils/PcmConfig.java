@@ -11,7 +11,7 @@ import android.media.MediaRecorder;
  */
 public class PcmConfig {
 
-    public static final int RATE = 16000;
+    public static final int RATE = 48000;
     public static final int CHANNEL_MODE_PLAY = AudioFormat.CHANNEL_OUT_MONO;
     public static final int CHANNEL_MODE_RECORD = AudioFormat.CHANNEL_IN_MONO;
     public static final int AUDIO_STREAM = AudioManager.STREAM_MUSIC;

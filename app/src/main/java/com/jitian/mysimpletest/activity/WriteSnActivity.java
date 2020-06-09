@@ -6,7 +6,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
 
+import com.allwinnertech.dragonsn.jni.ReadPrivateJNI;
 import com.jitian.mysimpletest.R;
+import com.jitian.mysimpletest.utils.LogUtil;
 import com.jitian.mysimpletest.utils.SecureZoneUtil;
 
 /**
@@ -23,6 +25,7 @@ public class WriteSnActivity extends AppCompatActivity implements View.OnClickLi
         mResultView = findViewById(R.id.read_result);
         findViewById(R.id.start_read).setOnClickListener(this);
         findViewById(R.id.start_write).setOnClickListener(this);
+        LogUtil.d("ReadPrivateJNI:" + ReadPrivateJNI.nativeGetParameter("WMAC"));
     }
 
 

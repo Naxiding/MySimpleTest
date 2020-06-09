@@ -1,6 +1,7 @@
 package com.jitian.mysimpletest.utils;
 
 import android.content.res.AssetFileDescriptor;
+import android.content.res.AssetManager;
 import android.media.AudioAttributes;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
@@ -21,8 +22,10 @@ public class MediaPlayerUtil {
     private SoundPool mSoundPool;
     public static final int POOL_TYPE = 2;
     private int mCurrentVoidId = 0;
+    private AssetManager mAssetManager;
 
     public MediaPlayerUtil() {
+        mAssetManager = MyApplication.getInstance().getAssets();
         mMediaPlayer = new MediaPlayer();
         mMediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
@@ -81,6 +84,7 @@ public class MediaPlayerUtil {
             });
             mMediaPlayer.prepareAsync();
         } catch (IOException | IllegalStateException e) {
+            LogUtil.d(e.getMessage());
             e.printStackTrace();
         }
     }

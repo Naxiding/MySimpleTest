@@ -45,7 +45,7 @@ public class PlayerTestActivity extends AppCompatActivity implements View.OnClic
     @Override
     public void onClick(View view) {
         if (view.getId() == R.id.playNext) {
-            mMediaPlayerUtil.playRawVoiceByType(VOICES[mIndex % VOICES.length], 0);
+            mMediaPlayerUtil.playRawVoiceByType(VOICES[10], 0);
             mIndex++;
         } else if (view.getId() == R.id.playStop) {
             mMediaPlayerUtil.stopPlay();
