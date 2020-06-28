@@ -207,4 +207,8 @@
     <color name="selector_color_unchecked">#cccccc</color>
     <color name="shadow_color">#4d000000</color>
     <color name="nav_button_color">#101010</color>
+    <color name="control_text_color">#ffffff</color>
+    <color name="control_seek_bar_progress">#002AFF</color>
+    <color name="control_seek_bar_background">#000000</color>
+
 </resources>

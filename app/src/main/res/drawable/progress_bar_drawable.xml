@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@android:id/background"
+        android:bottom="@dimen/control_seek_bar_sub"
+        android:left="@dimen/control_seek_bar_add_bottom"
+        android:right="@dimen/control_seek_bar_add_top"
+        android:top="@dimen/control_seek_bar_sub">
+        <shape>
+            <solid android:color="@color/control_seek_bar_background" />
+            <corners android:radius="@dimen/control_seek_bar_radius" />
+        </shape>
+    </item>
+
+    <item
+        android:id="@android:id/progress"
+        android:bottom="@dimen/control_seek_bar_sub"
+        android:left="@dimen/control_seek_bar_add_bottom"
+        android:right="@dimen/control_seek_bar_add_top"
+        android:top="@dimen/control_seek_bar_sub">
+        <clip>
+            <shape>
+                <solid android:color="@color/control_seek_bar_progress" />
+                <corners android:radius="@dimen/control_seek_bar_radius" />
+            </shape>
+        </clip>
+    </item>
+
+</layer-list>

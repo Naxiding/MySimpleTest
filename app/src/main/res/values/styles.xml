@@ -19,4 +19,55 @@
         <item name="android:layout_marginStart">@dimen/float_button_click_area_margin</item>
         <item name="android:layout_marginEnd">@dimen/float_button_click_area_margin</item>
     </style>
+
+    <style name="VerticalVolumeBar" parent="AppTheme">
+        <item name="android:progressDrawable">@drawable/progress_bar_drawable</item>
+        <item name="android:thumb">@drawable/control_progress_button</item>
+        <item name="android:paddingStart">@dimen/control_seek_bar_padding</item>
+        <item name="android:paddingEnd">@dimen/control_seek_bar_padding</item>
+        <item name="android:minHeight">@dimen/control_seek_bar_height</item>
+    </style>
+
+    <style name="BaseSelectText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/control_text_color</item>
+        <item name="android:textSize">@dimen/control_sub_button_text_size</item>
+        <item name="android:button">@null</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="CustomSelectText" parent="BaseSelectText">
+        <item name="android:layout_width">@dimen/control_select_text_view_width</item>
+        <item name="android:layout_height">@dimen/control_select_text_view_height</item>
+        <item name="android:background">@drawable/control_button_off</item>
+    </style>
+
+    <style name="CustomSelectTextPress" parent="BaseSelectText">
+        <item name="android:layout_width">@dimen/control_select_text_view_width</item>
+        <item name="android:layout_height">@dimen/control_select_text_view_height</item>
+        <item name="android:background">@drawable/custom_button_selector</item>
+    </style>
+
+    <style name="CustomTextView">
+        <item name="android:layout_width">@dimen/control_select_text_view_width</item>
+        <item name="android:layout_height">@dimen/control_select_text_view_en_height</item>
+        <item name="android:textColor">@color/control_text_color</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/control_sub_button_text_size_en</item>
+    </style>
+
+    <style name="CustomSwitchButton">
+        <item name="android:layout_width">@dimen/control_switch_button_width</item>
+        <item name="android:layout_height">@dimen/control_switch_button_height</item>
+        <item name="android:button">@null</item>
+        <item name="kswTextOn">@string/on</item>
+        <item name="kswTextOff">@string/off</item>
+        <item name="android:textSize">@dimen/control_sub_text_size</item>
+        <item name="android:textColor">@color/control_text_color</item>
+        <item name="kswThumbDrawable">@drawable/control_switch_button</item>
+        <item name="kswBackDrawable">@drawable/switch_background</item>
+        <item name="android:layout_marginTop">@dimen/control_switch_button_margin_top</item>
+    </style>
+
 </resources>

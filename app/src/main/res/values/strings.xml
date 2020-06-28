@@ -1,3 +1,92 @@
 <resources>
     <string name="app_name">MySimpleTest</string>
+
+    <string name="sound_control">调音区</string>
+    <string name="sound_control_en">Sound control</string>
+
+    <string name="music_effect">音乐效果</string>
+    <string name="music_effect_en">Music effect</string>
+    <string name="music_effect_standard">标准</string>
+    <string name="music_effect_standard_en">Standard</string>
+    <string name="music_effect_dance">劲舞</string>
+    <string name="music_effect_dance_en">Dance</string>
+    <string name="music_effect_voices">人声</string>
+    <string name="music_effect_voices_en">Voices</string>
+    <string name="music_effect_rock">摇滚</string>
+    <string name="music_effect_rock_en">Rock</string>
+    <string name="music_effect_outdoor">户外</string>
+    <string name="music_effect_outdoor_en">Outdoor</string>
+
+    <string name="mic_voice">话筒变音</string>
+    <string name="mic_voice_en">Mic voice</string>
+    <string name="mic_voice_old_man">老人</string>
+    <string name="mic_voice_old_man_en">Old man</string>
+    <string name="mic_voice_male_voice">男声</string>
+    <string name="mic_voice_male_voice_en">Male voice</string>
+    <string name="mic_voice_original">原声</string>
+    <string name="mic_voice_original_en">Original</string>
+    <string name="mic_voice_girl">女声</string>
+    <string name="mic_voice_girl_en">Girl</string>
+    <string name="mic_voice_doll">娃娃</string>
+    <string name="mic_voice_doll_en">Doll</string>
+
+    <string name="mic_effect">话筒效果</string>
+    <string name="mic_effect_en">Mic effect</string>
+    <string name="mic_effect_host">主持</string>
+    <string name="mic_effect_host_en">Host</string>
+    <string name="mic_effect_singer">唱将</string>
+    <string name="mic_effect_singer_en">Singer</string>
+    <string name="mic_effect_shout">喊麦</string>
+    <string name="mic_effect_shout_en">Shout</string>
+    <string name="mic_effect_pro">专业</string>
+    <string name="mic_effect_pro_en">Pro</string>
+    <string name="mic_effect_sing">演唱</string>
+    <string name="mic_effect_sing_en">Sing</string>
+
+    <string name="mood">氛围音</string>
+    <string name="mood_en">Mood</string>
+    <string name="mood_opening">开场</string>
+    <string name="mood_opening_en">Opening</string>
+    <string name="mood_cheers">喝彩</string>
+    <string name="mood_cheers_en">Cheers</string>
+    <string name="mood_applause">掌声</string>
+    <string name="mood_applause_en">Applause</string>
+    <string name="mood_whistle">口哨</string>
+    <string name="mood_whistle_en">Whistle</string>
+    <string name="mood_gunfire">枪声</string>
+    <string name="mood_gunfire_en">Gunfire</string>
+    <string name="mood_crow">乌鸦声</string>
+    <string name="mood_crow_en">Crow</string>
+    <string name="mood_laugh">大笑</string>
+    <string name="mood_laugh_en">Laugh</string>
+    <string name="mood_slap">打耳光</string>
+    <string name="mood_slap_en">Slap</string>
+    <string name="mood_mua">么么哒</string>
+    <string name="mood_mua_en">Mua</string>
+    <string name="mood_despise">鄙视</string>
+    <string name="mood_despise_en">Despise</string>
+    <string name="mood_kiss">飞吻</string>
+    <string name="mood_kiss_en">Kiss</string>
+    <string name="mood_thank">感谢</string>
+    <string name="mood_thank_en">Thank</string>
+
+    <string name="volume_control">音量调节</string>
+    <string name="volume_control_en">Volume control</string>
+    <string name="energy">节能</string>
+    <string name="energy_en">Energy</string>
+    <string name="noise_limit">限噪</string>
+    <string name="noise_limit_en">" Noise limit"</string>
+    <string name="on">ON</string>
+    <string name="off">OFF</string>
+    <string name="volume_control_master_vol">总音量</string>
+    <string name="volume_control_master_vol_en">Master vol</string>
+    <string name="volume_control_live_vol">直播音量</string>
+    <string name="volume_control_live_vol_en">Live vol</string>
+    <string name="volume_control_monitor_vol">监听音量</string>
+    <string name="volume_control_monitor_vol_en">Monitor vol</string>
+    <string name="volume_control_mic_vol">话筒音量</string>
+    <string name="volume_control_mic_vol_en">Mic vol</string>
+    <string name="volume_control_guitar_vol">吉他音量</string>
+    <string name="volume_control_guitar_vol_en">Guitar vol</string>
+
 </resources>

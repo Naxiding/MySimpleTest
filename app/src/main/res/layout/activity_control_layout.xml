@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/control_area"
+        android:layout_width="@dimen/control_width"
+        android:layout_height="@dimen/control_height"
+        layout="@layout/control_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/control_button"
+        android:background="@drawable/control_background"
+        android:visibility="invisible" />
+
+    <ToggleButton
+        android:id="@+id/control_button"
+        android:layout_width="@dimen/control_button_width"
+        android:layout_height="@dimen/control_button_width"
+        android:background="@drawable/ic_control_button_bg"
+        android:textOff=""
+        android:textOn=""
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

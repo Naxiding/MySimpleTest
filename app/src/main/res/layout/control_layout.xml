@@ -1,0 +1,1049 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="@dimen/control_width"
+    android:layout_height="@dimen/control_height"
+    android:background="@drawable/control_background">
+
+    <!--category sound control-->
+    <TextView
+        android:id="@+id/category_sound"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/control_category_text_margin_start"
+        android:gravity="center"
+        android:text="@string/sound_control"
+        android:textColor="@color/control_text_color"
+        android:textSize="@dimen/control_category_text_size"
+        app:layout_constraintBottom_toTopOf="@id/h_1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/h_top" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="@string/sound_control_en"
+        android:textColor="@color/control_text_color"
+        android:textSize="@dimen/control_category_text_size_en"
+        app:layout_constraintBottom_toTopOf="@id/h_1"
+        app:layout_constraintStart_toEndOf="@id/category_sound"
+        app:layout_constraintTop_toBottomOf="@id/h_top" />
+
+    <!--music effect area-->
+    <LinearLayout
+        android:id="@+id/music_effect"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@id/music_effect_standard"
+        app:layout_constraintEnd_toStartOf="@id/v_1"
+        app:layout_constraintStart_toEndOf="@id/v_left"
+        app:layout_constraintTop_toBottomOf="@id/h_1">
+
+        <TextView
+            android:id="@+id/music_effect_tv"
+            style="@style/BaseSelectText"
+            android:text="@string/music_effect"
+            android:textSize="@dimen/control_sub_text_size" />
+
+        <TextView
+            style="@style/CustomTextView"
+            android:text="@string/music_effect_en"
+            android:textSize="@dimen/control_sub_text_size_en" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/music_effect_standard"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@id/music_effect_dance"
+        app:layout_constraintEnd_toStartOf="@id/v_1"
+        app:layout_constraintStart_toEndOf="@id/v_left"
+        app:layout_constraintTop_toBottomOf="@id/music_effect">
+
+        <Button
+            android:id="@+id/music_effect_standard_bt"
+            style="@style/CustomSelectText"
+            android:text="@string/music_effect_standard" />
+
+        <TextView
+            style="@style/CustomTextView"
+            android:text="@string/music_effect_standard_en" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/music_effect_dance"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@id/music_effect_voices"
+        app:layout_constraintEnd_toStartOf="@id/v_1"
+        app:layout_constraintStart_toEndOf="@id/v_left"
+        app:layout_constraintTop_toBottomOf="@id/music_effect_standard">
+
+        <Button
+            android:id="@+id/music_effect_dance_bt"
+            style="@style/CustomSelectText"
+            android:text="@string/music_effect_dance" />
+
+        <TextView
+            style="@style/CustomTextView"
+            android:text="@string/music_effect_dance_en" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/music_effect_voices"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@id/music_effect_rock"
+        app:layout_constraintEnd_toStartOf="@id/v_1"
+        app:layout_constraintStart_toEndOf="@id/v_left"
+        app:layout_constraintTop_toBottomOf="@id/music_effect_dance">
+
+        <Button
+            android:id="@+id/music_effect_voices_bt"
+            style="@style/CustomSelectText"
+            android:text="@string/music_effect_voices" />
+
+        <TextView
+            style="@style/CustomTextView"
+            android:text="@string/music_effect_voices_en" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/music_effect_rock"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@id/music_effect_outdoor"
+        app:layout_constraintEnd_toStartOf="@id/v_1"
+        app:layout_constraintStart_toEndOf="@id/v_left"
+        app:layout_constraintTop_toBottomOf="@id/music_effect_voices">
+
+        <Button
+            android:id="@+id/music_effect_rock_rb"
+            style="@style/CustomSelectText"
+            android:text="@string/music_effect_rock" />
+
+        <TextView
+            style="@style/CustomTextView"
+            android:text="@string/music_effect_rock_en" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/music_effect_outdoor"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@id/h_2"
+        app:layout_constraintEnd_toStartOf="@id/v_1"
+        app:layout_constraintStart_toEndOf="@id/v_left"
+        app:layout_constraintTop_toBottomOf="@id/music_effect_rock">
+
+        <Button
+            android:id="@+id/music_effect_outdoor_bt"
+            style="@style/CustomSelectText"
+            android:text="@string/music_effect_outdoor" />
+
+        <TextView
+            style="@style/CustomTextView"
+            android:text="@string/music_effect_outdoor_en" />
+    </LinearLayout>
+
+    <!--mic voice area-->
+    <LinearLayout
+        android:id="@+id/mic_voice"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@id/music_effect_standard"
+        app:layout_constraintEnd_toStartOf="@id/v_2"
+        app:layout_constraintStart_toEndOf="@id/v_1"
+        app:layout_constraintTop_toBottomOf="@id/h_1">
+
+        <TextView
+            android:id="@+id/mic_voice_tv"
+            style="@style/BaseSelectText"
+            android:text="@string/mic_voice"
+            android:textSize="@dimen/control_sub_text_size" />
+
+        <TextView
+            style="@style/CustomTextView"
+            android:text="@string/mic_voice_en"
+            android:textSize="@dimen/control_sub_text_size_en" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/mic_voice_old_man"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@id/music_effect_dance"
+        app:layout_constraintEnd_toStartOf="@id/v_2"
+        app:layout_constraintStart_toEndOf="@id/v_1"
+        app:layout_constraintTop_toBottomOf="@id/mic_voice">
+
+        <Button
+            android:id="@+id/mic_voice_old_man_bt"
+            style="@style/CustomSelectText"
+            android:text="@string/mic_voice_old_man" />
+
+        <TextView
+            style="@style/CustomTextView"
+            android:text="@string/mic_voice_old_man_en" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/mic_voice_male_voice"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@id/music_effect_voices"
+        app:layout_constraintEnd_toStartOf="@id/v_2"
+        app:layout_constraintStart_toEndOf="@id/v_1"
+        app:layout_constraintTop_toBottomOf="@id/music_effect_standard">
+
+        <Button
+            android:id="@+id/mic_voice_male_voice_bt"
+            style="@style/CustomSelectText"
+            android:text="@string/mic_voice_male_voice" />
+
+        <TextView
+            style="@style/CustomTextView"
+            android:text="@string/mic_voice_male_voice_en" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/mic_voice_original"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@id/music_effect_rock"
+        app:layout_constraintEnd_toStartOf="@id/v_2"
+        app:layout_constraintStart_toEndOf="@id/v_1"
+        app:layout_constraintTop_toBottomOf="@id/music_effect_dance">
+
+        <Button
+            android:id="@+id/mic_voice_original_bt"
+            style="@style/CustomSelectText"
+            android:text="@string/mic_voice_original" />
+
+        <TextView
+            style="@style/CustomTextView"
+            android:text="@string/mic_voice_original_en" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/mic_voice_girl"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@id/music_effect_outdoor"
+        app:layout_constraintEnd_toStartOf="@id/v_2"
+        app:layout_constraintStart_toEndOf="@id/v_1"
+        app:layout_constraintTop_toBottomOf="@id/music_effect_voices">
+
+        <Button
+            android:id="@+id/mic_voice_girl_bt"
+            style="@style/CustomSelectText"
+            android:text="@string/mic_voice_girl" />
+
+        <TextView
+            style="@style/CustomTextView"
+            android:text="@string/mic_voice_girl_en" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/mic_voice_doll"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@id/h_2"
+        app:layout_constraintEnd_toStartOf="@id/v_2"
+        app:layout_constraintStart_toEndOf="@id/v_1"
+        app:layout_constraintTop_toBottomOf="@id/music_effect_rock">
+
+        <Button
+            android:id="@+id/mic_voice_doll_bt"
+            style="@style/CustomSelectText"
+            android:text="@string/mic_voice_doll" />
+
+        <TextView
+            style="@style/CustomTextView"
+            android:text="@string/mic_voice_doll_en" />
+    </LinearLayout>
+
+    <!--mic effect area-->
+    <LinearLayout
+        android:id="@+id/mic_effect"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@id/music_effect_standard"
+        app:layout_constraintEnd_toStartOf="@id/v_3"
+        app:layout_constraintStart_toEndOf="@id/v_2"
+        app:layout_constraintTop_toBottomOf="@id/h_1">
+
+        <TextView
+            android:id="@+id/mic_effect_tv"
+            style="@style/BaseSelectText"
+            android:text="@string/mic_effect"
+            android:textSize="@dimen/control_sub_text_size" />
+
+        <TextView
+            style="@style/CustomTextView"
+            android:text="@string/mic_effect_en"
+            android:textSize="@dimen/control_sub_text_size_en" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/mic_effect_host"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@id/music_effect_dance"
+        app:layout_constraintEnd_toStartOf="@id/v_3"
+        app:layout_constraintStart_toEndOf="@id/v_2"
+        app:layout_constraintTop_toBottomOf="@id/mic_effect">
+
+        <Button
+            android:id="@+id/mic_effect_host_bt"
+            style="@style/CustomSelectText"
+            android:text="@string/mic_effect_host" />
+
+        <TextView
+            style="@style/CustomTextView"
+            android:text="@string/mic_effect_host_en" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/mic_effect_singer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@id/music_effect_voices"
+        app:layout_constraintEnd_toStartOf="@id/v_3"
+        app:layout_constraintStart_toEndOf="@id/v_2"
+        app:layout_constraintTop_toBottomOf="@id/music_effect_standard">
+
+        <Button
+            android:id="@+id/mic_effect_singer_bt"
+            style="@style/CustomSelectText"
+            android:text="@string/mic_effect_singer" />
+
+        <TextView
+            style="@style/CustomTextView"
+            android:text="@string/mic_effect_singer_en" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/mic_effect_shout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@id/music_effect_rock"
+        app:layout_constraintEnd_toStartOf="@id/v_3"
+        app:layout_constraintStart_toEndOf="@id/v_2"
+        app:layout_constraintTop_toBottomOf="@id/music_effect_dance">
+
+        <Button
+            android:id="@+id/mic_effect_shout_bt"
+            style="@style/CustomSelectText"
+            android:text="@string/mic_effect_shout" />
+
+        <TextView
+            style="@style/CustomTextView"
+            android:text="@string/mic_effect_shout_en" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/mic_effect_pro"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@id/music_effect_outdoor"
+        app:layout_constraintEnd_toStartOf="@id/v_3"
+        app:layout_constraintStart_toEndOf="@id/v_2"
+        app:layout_constraintTop_toBottomOf="@id/music_effect_voices">
+
+        <Button
+            android:id="@+id/mic_effect_pro_bt"
+            style="@style/CustomSelectText"
+            android:text="@string/mic_effect_pro" />
+
+        <TextView
+            style="@style/CustomTextView"
+            android:text="@string/mic_effect_pro_en" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/mic_effect_sing"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@id/h_2"
+        app:layout_constraintEnd_toStartOf="@id/v_3"
+        app:layout_constraintStart_toEndOf="@id/v_2"
+        app:layout_constraintTop_toBottomOf="@id/music_effect_rock">
+
+        <Button
+            android:id="@+id/mic_effect_sing_bt"
+            style="@style/CustomSelectText"
+            android:text="@string/mic_effect_sing" />
+
+        <TextView
+            style="@style/CustomTextView"
+            android:text="@string/mic_effect_sing_en" />
+    </LinearLayout>
+
+    <!--category mood control-->
+    <TextView
+        android:id="@+id/category_mood"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/control_category_text_margin_start"
+        android:gravity="center"
+        android:text="@string/mood"
+        android:textColor="@color/control_text_color"
+        android:textSize="@dimen/control_category_text_size"
+        app:layout_constraintBottom_toTopOf="@id/h_1"
+        app:layout_constraintStart_toEndOf="@id/v_3"
+        app:layout_constraintTop_toBottomOf="@id/h_top" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="@string/mood_en"
+        android:textColor="@color/control_text_color"
+        android:textSize="@dimen/control_category_text_size_en"
+        app:layout_constraintBottom_toTopOf="@id/h_1"
+        app:layout_constraintStart_toEndOf="@id/category_mood"
+        app:layout_constraintTop_toBottomOf="@id/h_top" />
+
+    <LinearLayout
+        android:id="@+id/mood_opening"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@id/mood_applause"
+        app:layout_constraintEnd_toStartOf="@id/mood_cheers"
+        app:layout_constraintStart_toEndOf="@id/v_3"
+        app:layout_constraintTop_toBottomOf="@id/h_1">
+
+        <Button
+            android:id="@+id/mood_opening_bt"
+            style="@style/CustomSelectTextPress"
+            android:background="@drawable/custom_button_selector"
+            android:text="@string/mood_opening" />
+
+        <TextView
+            style="@style/CustomTextView"
+            android:text="@string/mood_opening_en" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/mood_cheers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@id/mood_applause"
+        app:layout_constraintEnd_toStartOf="@id/v_right"
+        app:layout_constraintStart_toEndOf="@id/mood_opening"
+        app:layout_constraintTop_toBottomOf="@id/h_1">
+
+        <Button
+            android:id="@+id/mood_cheers_bt"
+            style="@style/CustomSelectTextPress"
+            android:background="@drawable/custom_button_selector"
+            android:text="@string/mood_cheers" />
+
+        <TextView
+            style="@style/CustomTextView"
+            android:text="@string/mood_cheers_en" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/mood_applause"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toStartOf="@id/mood_cheers"
+        app:layout_constraintStart_toEndOf="@id/v_3"
+        app:layout_constraintTop_toTopOf="@id/mic_effect_host">
+
+        <Button
+            android:id="@+id/mood_applause_bt"
+            style="@style/CustomSelectTextPress"
+            android:background="@drawable/custom_button_selector"
+            android:text="@string/mood_applause" />
+
+        <TextView
+            style="@style/CustomTextView"
+            android:text="@string/mood_applause_en" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/mood_whistle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toStartOf="@id/v_right"
+        app:layout_constraintStart_toEndOf="@id/mood_opening"
+        app:layout_constraintTop_toTopOf="@id/mood_applause">
+
+        <Button
+            android:id="@+id/mood_whistle_bt"
+            style="@style/CustomSelectTextPress"
+            android:background="@drawable/custom_button_selector"
+            android:text="@string/mood_whistle" />
+
+        <TextView
+            style="@style/CustomTextView"
+            android:text="@string/mood_whistle_en" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/mood_gunfire"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toStartOf="@id/mood_cheers"
+        app:layout_constraintStart_toEndOf="@id/v_3"
+        app:layout_constraintTop_toTopOf="@id/mic_effect_singer">
+
+        <Button
+            android:id="@+id/mood_gunfire_bt"
+            style="@style/CustomSelectTextPress"
+            android:background="@drawable/custom_button_selector"
+            android:text="@string/mood_gunfire" />
+
+        <TextView
+            style="@style/CustomTextView"
+            android:text="@string/mood_gunfire_en" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/mood_crow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toStartOf="@id/v_right"
+        app:layout_constraintStart_toEndOf="@id/mood_opening"
+        app:layout_constraintTop_toTopOf="@id/mood_gunfire">
+
+        <Button
+            android:id="@+id/mood_crow_bt"
+            style="@style/CustomSelectTextPress"
+            android:background="@drawable/custom_button_selector"
+            android:text="@string/mood_crow" />
+
+        <TextView
+            style="@style/CustomTextView"
+            android:text="@string/mood_crow_en" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/mood_laugh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toStartOf="@id/mood_cheers"
+        app:layout_constraintStart_toEndOf="@id/v_3"
+        app:layout_constraintTop_toTopOf="@id/mic_effect_shout">
+
+        <Button
+            android:id="@+id/mood_laugh_bt"
+            style="@style/CustomSelectTextPress"
+            android:background="@drawable/custom_button_selector"
+            android:text="@string/mood_laugh" />
+
+        <TextView
+            style="@style/CustomTextView"
+            android:text="@string/mood_laugh_en" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/mood_slap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toStartOf="@id/v_right"
+        app:layout_constraintStart_toEndOf="@id/mood_laugh"
+        app:layout_constraintTop_toTopOf="@id/mood_laugh">
+
+        <Button
+            android:id="@+id/mood_slap_bt"
+            style="@style/CustomSelectTextPress"
+            android:background="@drawable/custom_button_selector"
+            android:text="@string/mood_slap" />
+
+        <TextView
+            style="@style/CustomTextView"
+            android:text="@string/mood_slap_en" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/mood_mua"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toStartOf="@id/mood_despise"
+        app:layout_constraintStart_toEndOf="@id/v_3"
+        app:layout_constraintTop_toTopOf="@id/mic_effect_pro">
+
+        <Button
+            android:id="@+id/mood_mua_bt"
+            style="@style/CustomSelectTextPress"
+            android:background="@drawable/custom_button_selector"
+            android:text="@string/mood_mua" />
+
+        <TextView
+            style="@style/CustomTextView"
+            android:text="@string/mood_mua_en" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/mood_despise"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toStartOf="@id/v_right"
+        app:layout_constraintStart_toEndOf="@id/mood_mua"
+        app:layout_constraintTop_toTopOf="@id/mic_effect_pro">
+
+        <Button
+            android:id="@+id/mood_despise_bt"
+            style="@style/CustomSelectTextPress"
+            android:background="@drawable/custom_button_selector"
+            android:text="@string/mood_despise" />
+
+        <TextView
+            style="@style/CustomTextView"
+            android:text="@string/mood_despise_en" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/mood_kiss"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toStartOf="@id/mood_thank"
+        app:layout_constraintStart_toEndOf="@id/v_3"
+        app:layout_constraintTop_toTopOf="@id/mic_effect_sing">
+
+        <Button
+            android:id="@+id/mood_kiss_bt"
+            style="@style/CustomSelectTextPress"
+            android:background="@drawable/custom_button_selector"
+            android:text="@string/mood_kiss" />
+
+        <TextView
+            style="@style/CustomTextView"
+            android:text="@string/mood_kiss_en" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/mood_thank"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toStartOf="@id/v_right"
+        app:layout_constraintStart_toEndOf="@id/mood_kiss"
+        app:layout_constraintTop_toTopOf="@id/mood_kiss">
+
+        <Button
+            android:id="@+id/mood_thank_bt"
+            style="@style/CustomSelectTextPress"
+            android:background="@drawable/custom_button_selector"
+            android:text="@string/mood_thank" />
+
+        <TextView
+            style="@style/CustomTextView"
+            android:text="@string/mood_thank_en" />
+    </LinearLayout>
+
+    <!--volume control area-->
+    <TextView
+        android:id="@+id/category_volume_control"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/control_category_text_margin_start"
+        android:layout_marginTop="@dimen/control_category_text_margin_top"
+        android:gravity="center"
+        android:text="@string/volume_control"
+        android:textColor="@color/control_text_color"
+        android:textSize="@dimen/control_category_text_size"
+        app:layout_constraintStart_toStartOf="@id/v_left"
+        app:layout_constraintTop_toBottomOf="@id/h_2" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="@string/volume_control_en"
+        android:textColor="@color/control_text_color"
+        android:textSize="@dimen/control_category_text_size_en"
+        app:layout_constraintBottom_toBottomOf="@id/category_volume_control"
+        app:layout_constraintStart_toEndOf="@id/category_volume_control" />
+
+    <!--energy area-->
+    <com.kyleduo.switchbutton.SwitchButton
+        android:id="@+id/energy_sw"
+        style="@style/CustomSwitchButton"
+        app:layout_constraintEnd_toEndOf="@id/v_right"
+        app:layout_constraintTop_toBottomOf="@id/h_2" />
+
+    <TextView
+        android:id="@+id/energy_en"
+        style="@style/CustomTextView"
+        android:layout_width="wrap_content"
+        android:gravity="center"
+        android:text="@string/energy_en"
+        app:layout_constraintStart_toEndOf="@id/energy_ch"
+        app:layout_constraintEnd_toEndOf="@id/energy_sw"
+        app:layout_constraintTop_toBottomOf="@id/energy_sw" />
+
+    <TextView
+        android:id="@+id/energy_ch"
+        style="@style/CustomTextView"
+        android:layout_width="wrap_content"
+        android:text="@string/energy"
+        app:layout_constraintEnd_toStartOf="@id/energy_en"
+        app:layout_constraintStart_toStartOf="@id/energy_sw"
+        app:layout_constraintTop_toTopOf="@id/energy_en" />
+
+    <!--noise limit area-->
+    <TextView
+        android:id="@+id/noise_limit_en"
+        style="@style/CustomTextView"
+        android:layout_width="wrap_content"
+        android:layout_marginEnd="@dimen/control_switch_button_margin_end"
+        android:gravity="center"
+        android:text="@string/noise_limit_en"
+        app:layout_constraintEnd_toStartOf="@id/energy_sw"
+        app:layout_constraintTop_toBottomOf="@id/noise_limit_sw" />
+
+    <TextView
+        android:id="@+id/noise_limit_ch"
+        style="@style/CustomTextView"
+        android:layout_width="wrap_content"
+        android:text="@string/noise_limit"
+        app:layout_constraintEnd_toStartOf="@id/noise_limit_en"
+        app:layout_constraintTop_toTopOf="@id/noise_limit_en" />
+
+    <com.kyleduo.switchbutton.SwitchButton
+        android:id="@+id/noise_limit_sw"
+        style="@style/CustomSwitchButton"
+        app:layout_constraintEnd_toEndOf="@id/noise_limit_en"
+        app:layout_constraintStart_toStartOf="@id/noise_limit_ch"
+        app:layout_constraintTop_toBottomOf="@id/h_2" />
+
+    <!--seek bar area -->
+    <!--master vol-->
+    <com.jitian.view.VerticalSeekBarWrapper
+        android:id="@+id/master_vol"
+        android:layout_width="@dimen/control_seek_bar_width"
+        android:layout_height="@dimen/control_seek_bar_height"
+        app:layout_constraintEnd_toStartOf="@id/live_vol"
+        app:layout_constraintStart_toEndOf="@id/v_left"
+        app:layout_constraintTop_toBottomOf="@id/category_volume_control">
+
+        <com.jitian.view.VerticalSeekBar
+            android:id="@+id/master_vol_seek_bar"
+            style="@style/VerticalVolumeBar"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:splitTrack="false"
+            app:seekBarRotation="CW270" /> <!-- Rotation: CW90 or CW270 -->
+    </com.jitian.view.VerticalSeekBarWrapper>
+
+    <TextView
+        android:id="@+id/master_vol_ch"
+        style="@style/CustomTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/volume_control_master_vol"
+        android:textSize="@dimen/control_sub_text_size"
+        app:layout_constraintBottom_toTopOf="@id/master_vol_en"
+        app:layout_constraintEnd_toEndOf="@id/master_vol"
+        app:layout_constraintStart_toStartOf="@id/master_vol"
+        app:layout_constraintTop_toBottomOf="@id/master_vol" />
+
+    <TextView
+        android:id="@+id/master_vol_en"
+        style="@style/CustomTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/volume_control_master_vol_en"
+        android:textSize="@dimen/control_sub_text_size"
+        app:layout_constraintBottom_toBottomOf="@id/h_bottom"
+        app:layout_constraintEnd_toEndOf="@id/master_vol_ch"
+        app:layout_constraintStart_toStartOf="@id/master_vol_ch"
+        app:layout_constraintTop_toBottomOf="@id/master_vol_ch" />
+
+    <!--live vol-->
+    <com.jitian.view.VerticalSeekBarWrapper
+        android:id="@+id/live_vol"
+        android:layout_width="@dimen/control_seek_bar_width"
+        android:layout_height="@dimen/control_seek_bar_height"
+        app:layout_constraintEnd_toStartOf="@id/monitor_vol"
+        app:layout_constraintStart_toEndOf="@id/master_vol"
+        app:layout_constraintTop_toBottomOf="@id/category_volume_control">
+
+        <com.jitian.view.VerticalSeekBar
+            android:id="@+id/live_vol_seek_bar"
+            style="@style/VerticalVolumeBar"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:splitTrack="false"
+            app:seekBarRotation="CW270" /> <!-- Rotation: CW90 or CW270 -->
+    </com.jitian.view.VerticalSeekBarWrapper>
+
+    <TextView
+        android:id="@+id/live_vol_ch"
+        style="@style/CustomTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/volume_control_live_vol"
+        android:textSize="@dimen/control_sub_text_size"
+        app:layout_constraintBottom_toTopOf="@id/live_vol_en"
+        app:layout_constraintEnd_toEndOf="@id/live_vol"
+        app:layout_constraintStart_toStartOf="@id/live_vol"
+        app:layout_constraintTop_toBottomOf="@id/live_vol" />
+
+    <TextView
+        android:id="@+id/live_vol_en"
+        style="@style/CustomTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/volume_control_live_vol_en"
+        android:textSize="@dimen/control_sub_text_size"
+        app:layout_constraintBottom_toBottomOf="@id/h_bottom"
+        app:layout_constraintEnd_toEndOf="@id/live_vol_ch"
+        app:layout_constraintStart_toStartOf="@id/live_vol_ch"
+        app:layout_constraintTop_toBottomOf="@id/live_vol_ch" />
+
+    <!--monitor vol-->
+    <com.jitian.view.VerticalSeekBarWrapper
+        android:id="@+id/monitor_vol"
+        android:layout_width="@dimen/control_seek_bar_width"
+        android:layout_height="@dimen/control_seek_bar_height"
+        app:layout_constraintEnd_toStartOf="@id/mic_vol"
+        app:layout_constraintStart_toEndOf="@id/live_vol"
+        app:layout_constraintTop_toBottomOf="@id/category_volume_control">
+
+        <com.jitian.view.VerticalSeekBar
+            android:id="@+id/monitor_vol_seek_bar"
+            style="@style/VerticalVolumeBar"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:splitTrack="false"
+            app:seekBarRotation="CW270" /> <!-- Rotation: CW90 or CW270 -->
+    </com.jitian.view.VerticalSeekBarWrapper>
+
+    <TextView
+        android:id="@+id/monitor_vol_ch"
+        style="@style/CustomTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/volume_control_monitor_vol"
+        android:textSize="@dimen/control_sub_text_size"
+        app:layout_constraintBottom_toTopOf="@id/monitor_vol_en"
+        app:layout_constraintEnd_toEndOf="@id/monitor_vol"
+        app:layout_constraintStart_toStartOf="@id/monitor_vol"
+        app:layout_constraintTop_toBottomOf="@id/monitor_vol" />
+
+    <TextView
+        android:id="@+id/monitor_vol_en"
+        style="@style/CustomTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/volume_control_monitor_vol_en"
+        android:textSize="@dimen/control_sub_text_size"
+        app:layout_constraintBottom_toBottomOf="@id/h_bottom"
+        app:layout_constraintEnd_toEndOf="@id/monitor_vol_ch"
+        app:layout_constraintStart_toStartOf="@id/monitor_vol_ch"
+        app:layout_constraintTop_toBottomOf="@id/monitor_vol_ch" />
+
+    <!--mic vol-->
+    <com.jitian.view.VerticalSeekBarWrapper
+        android:id="@+id/mic_vol"
+        android:layout_width="@dimen/control_seek_bar_width"
+        android:layout_height="@dimen/control_seek_bar_height"
+        app:layout_constraintEnd_toStartOf="@id/guitar_vol"
+        app:layout_constraintStart_toEndOf="@id/monitor_vol"
+        app:layout_constraintTop_toBottomOf="@id/category_volume_control">
+
+        <com.jitian.view.VerticalSeekBar
+            android:id="@+id/mic_vol_seek_bar"
+            style="@style/VerticalVolumeBar"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:splitTrack="false"
+            app:seekBarRotation="CW270" /> <!-- Rotation: CW90 or CW270 -->
+    </com.jitian.view.VerticalSeekBarWrapper>
+
+    <TextView
+        android:id="@+id/mic_vol_ch"
+        style="@style/CustomTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/volume_control_mic_vol"
+        android:textSize="@dimen/control_sub_text_size"
+        app:layout_constraintBottom_toTopOf="@id/mic_vol_en"
+        app:layout_constraintEnd_toEndOf="@id/mic_vol"
+        app:layout_constraintStart_toStartOf="@id/mic_vol"
+        app:layout_constraintTop_toBottomOf="@id/mic_vol" />
+
+    <TextView
+        android:id="@+id/mic_vol_en"
+        style="@style/CustomTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/volume_control_mic_vol_en"
+        android:textSize="@dimen/control_sub_text_size"
+        app:layout_constraintBottom_toBottomOf="@id/h_bottom"
+        app:layout_constraintEnd_toEndOf="@id/mic_vol_ch"
+        app:layout_constraintStart_toStartOf="@id/mic_vol_ch"
+        app:layout_constraintTop_toBottomOf="@id/mic_vol_ch" />
+
+
+    <!--guitar vol-->
+    <com.jitian.view.VerticalSeekBarWrapper
+        android:id="@+id/guitar_vol"
+        android:layout_width="@dimen/control_seek_bar_width"
+        android:layout_height="@dimen/control_seek_bar_height"
+        app:layout_constraintEnd_toEndOf="@id/v_right"
+        app:layout_constraintStart_toEndOf="@id/mic_vol"
+        app:layout_constraintTop_toBottomOf="@id/category_volume_control">
+
+        <com.jitian.view.VerticalSeekBar
+            android:id="@+id/guitar_vol_seek_bar"
+            style="@style/VerticalVolumeBar"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:splitTrack="false"
+            app:seekBarRotation="CW270" /> <!-- Rotation: CW90 or CW270 -->
+    </com.jitian.view.VerticalSeekBarWrapper>
+
+    <TextView
+        android:id="@+id/guitar_vol_ch"
+        style="@style/CustomTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/volume_control_guitar_vol"
+        android:textSize="@dimen/control_sub_text_size"
+        app:layout_constraintBottom_toTopOf="@id/guitar_vol_en"
+        app:layout_constraintEnd_toEndOf="@id/guitar_vol"
+        app:layout_constraintStart_toStartOf="@id/guitar_vol"
+        app:layout_constraintTop_toBottomOf="@id/guitar_vol" />
+
+    <TextView
+        android:id="@+id/guitar_vol_en"
+        style="@style/CustomTextView"
+        android:layout_width="wrap_content"
+        android:text="@string/volume_control_guitar_vol_en"
+        android:textSize="@dimen/control_sub_text_size"
+        app:layout_constraintBottom_toBottomOf="@id/h_bottom"
+        app:layout_constraintEnd_toEndOf="@id/guitar_vol_ch"
+        app:layout_constraintStart_toStartOf="@id/guitar_vol_ch"
+        app:layout_constraintTop_toBottomOf="@id/guitar_vol_ch" />
+
+    <!--line area-->
+    <android.support.constraint.Guideline
+        android:id="@+id/h_top"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="6dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/h_1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="40dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/h_2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="255dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/h_bottom"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="6dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/v_left"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="6dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/v_1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="63dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/v_2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="123dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/v_3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="183dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/v_right"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="6dp" />
+</android.support.constraint.ConstraintLayout>

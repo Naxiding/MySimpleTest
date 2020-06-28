@@ -21,6 +21,8 @@
         tools:ignore="ProtectedPermissions" />
 
     <application
+        android:appComponentFactory="@string/app_name"
+        tools:replace="android:appComponentFactory"
         android:name=".MyApplication"
         android:allowBackup="false"
         android:icon="@mipmap/ic_launcher"
@@ -29,11 +31,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".activity.MainActivity"
+            android:name=".activity.RecordPlayActivity"
             android:launchMode="singleInstance">
 
         </activity>
-        <activity android:name=".activity.RecordPlayActivity">
+        <activity
+            android:name=".activity.XianKongActivity"
+            android:screenOrientation="landscape">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <action android:name="android.intent.action.VIEW" />
